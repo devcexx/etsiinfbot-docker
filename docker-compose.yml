@@ -10,6 +10,8 @@ services:
 
     command: "--character-set-server=utf8mb4 --skip-character-set-client-handshake=1"
 
+    restart: "on-failure"
+
   etsiinfbot:
     build:
       context: ./etsiinfbot-docker
@@ -30,6 +32,8 @@ services:
 
     depends_on:
       - mysql
+
+    restart: "on-failure"
 
 volumes:
   db-data:
