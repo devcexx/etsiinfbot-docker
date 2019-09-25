@@ -23,6 +23,7 @@ services:
       DB_NAME: etsiinfbot
       DB_USER: root
       DB_PASS: abc123
+      DB_CHARSET: utf8mb4
 
     volumes:
       - "./params.php:/sources/config/params.php"
